@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Applover</string>
+	<string name="app_name">Applover</string>
+
+	<string name="login_email">Email address</string>
+	<string name="login_login">Login</string>
+	<string name="login_password">Password</string>
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--https://material.io/design/typography/the-type-system.html#-->
+	<dimen name="H1">96sp</dimen>
+	<dimen name="H2">60sp</dimen>
+	<dimen name="H3">48sp</dimen>
+	<dimen name="H4">34sp</dimen>
+	<dimen name="H5">24sp</dimen>
+	<dimen name="H6">20sp</dimen>
+	<dimen name="Subtitle1">16sp</dimen>
+	<dimen name="Subtitle2">14sp</dimen>
+	<dimen name="Body1">16sp</dimen>
+	<dimen name="Body2">14sp</dimen>
+	<dimen name="BUTTON">14sp</dimen>
+	<dimen name="Caption">12sp</dimen>
+	<dimen name="OVERLINE">10sp</dimen>
+
+	<dimen name="cornerRadius">6dp</dimen>
+	<dimen name="boxStrokeWidth">1dp</dimen>
+	<dimen name="TextInputEditTextHeight">56dp</dimen>
+	<dimen name="ButtonHeight">64dp</dimen>
+</resources>
