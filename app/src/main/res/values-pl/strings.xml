@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Applover</string>
+
+	<string name="login_email">Adres Email</string>
+	<string name="login_error_network_connection">Brak połączenia z internetem!</string>
+	<string name="login_error_server">Wewnętzny bład serwera!</string>
+	<string name="login_error_unauthorized">Brak autoryzacji!</string>
+	<string name="login_error_unknown">Nieznany błąd!</string>
+	<string name="login_exit_click_info">Aby wyjść kliknij wstecz jeszcze raz</string>
+	<string name="login_login">Zaloguj</string>
+	<string name="login_password">Hasło</string>
+	<string name="login_validation_not_empty">Pole nie może być puste!</string>
+	<string name="login_validation_incorrect_email">Niepoprawny email!</string>
+	<string name="login_validation_short_password">Za krótkie hasło!</string>
+
+	<string name="success_success_info">Sukces!</string>
+</resources>

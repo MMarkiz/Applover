@@ -4,6 +4,7 @@ import com.applover.markiz.data.model.Status
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.POST
@@ -32,5 +33,5 @@ interface ApploverApiService {
 	}
 
 	@POST("v1/login")
-	fun postLoginAsync(@Query("email") email: String, @Query("password") password: String): Deferred<Status>
+	fun postLoginAsync(@Query("email") email: String, @Query("password") password: String): Deferred<Response<Status>>
 }

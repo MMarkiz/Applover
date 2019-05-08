@@ -1,93 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-		xmlns:android="http://schemas.android.com/apk/res/android"
-		xmlns:tools="http://schemas.android.com/tools"
-		xmlns:app="http://schemas.android.com/apk/res-auto"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@color/colorBackground"
-		tools:context=".ui.login.LoginActivity">
+<layout>
+	<data>
+		<variable name="viewmodel"
+		          type="com.applover.markiz.ui.login.LoginViewModel"/>
+	</data>
+	<androidx.constraintlayout.widget.ConstraintLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			xmlns:tools="http://schemas.android.com/tools"
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/colorBackground"
+			tools:context=".ui.login.LoginActivity">
 
+		<ImageView
+				android:id="@+id/imageview_login_logo"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				app:layout_constraintDimensionRatio="H,1.4:1"
+				android:src="@drawable/all_logo_24dp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintHorizontal_weight="4"
+				app:layout_constraintRight_toLeftOf="@id/linearlayout_login_layout"
+				tools:ignore="ContentDescription"/>
 
-	<ImageView
-			android:id="@+id/imageview_login_logo"
-			android:layout_width="0dp"
-			android:layout_height="0dp"
-			app:layout_constraintDimensionRatio="H,1.4:1"
-			android:src="@drawable/all_logo_24dp"
-			app:layout_constraintLeft_toLeftOf="parent"
-			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintHorizontal_weight="4"
-			app:layout_constraintRight_toLeftOf="@id/linearlayout_login_layout"
-			tools:ignore="ContentDescription"/>
-
-	<TextView
-			android:id="@+id/textview_login_info"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/login_login"
-			android:textSize="@dimen/H6"
-			android:textColor="@color/colorSecondary"
-			android:layout_margin="16dp"
-			app:layout_constraintBottom_toTopOf="@id/linearlayout_login_layout"
-			app:layout_constraintLeft_toLeftOf="@id/linearlayout_login_layout"
-			app:layout_constraintRight_toRightOf="@id/linearlayout_login_layout"/>
-
-	<LinearLayout
-			android:id="@+id/linearlayout_login_layout"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintLeft_toRightOf="@id/imageview_login_logo"
-			app:layout_constraintRight_toRightOf="parent"
-			app:layout_constraintHorizontal_weight="6"
-			android:orientation="vertical"
-			android:layout_marginEnd="16dp"
-			android:layout_marginStart="0dp">
-
-		<com.google.android.material.textfield.TextInputLayout
-				android:id="@+id/textinputlayout_login_login"
-				android:layout_width="match_parent"
+		<TextView
+				android:id="@+id/textview_login_info"
+				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:hint="@string/login_email"
-				style="@style/Widget.Applover.TextInputLayout">
-
-			<com.google.android.material.textfield.TextInputEditText
-					android:id="@+id/edittext_login_login"
-					android:layout_width="match_parent"
-					android:layout_height="@dimen/TextInputEditTextHeight"
-					android:inputType="textEmailAddress"
-					style="@style/Theme.Applover.TextInputEditText"/>
-		</com.google.android.material.textfield.TextInputLayout>
-
-		<com.google.android.material.textfield.TextInputLayout
-				android:id="@+id/textinputlayout_login_password"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="16dp"
-				android:hint="@string/login_password"
-				style="@style/Widget.Applover.TextInputLayout"
-				app:passwordToggleDrawable="@drawable/login_selector_preview"
-				app:passwordToggleEnabled="true"
-				app:passwordToggleTint="@color/colorSecondary">
-
-			<com.google.android.material.textfield.TextInputEditText
-					android:id="@+id/edittext_login_password"
-					android:layout_width="match_parent"
-					android:layout_height="@dimen/TextInputEditTextHeight"
-					android:inputType="textPassword"
-					style="@style/Theme.Applover.TextInputEditText"/>
-		</com.google.android.material.textfield.TextInputLayout>
-
-
-		<com.google.android.material.button.MaterialButton
-				android:id="@+id/button_login_login"
-				android:layout_width="match_parent"
-				android:layout_height="@dimen/ButtonHeight"
 				android:text="@string/login_login"
-				android:layout_marginTop="16dp"
-				style="@style/Theme.Applover.Button"/>
-	</LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+				android:textSize="@dimen/H6"
+				android:textColor="@color/colorSecondary"
+				android:layout_margin="16dp"
+				app:layout_constraintBottom_toTopOf="@id/linearlayout_login_layout"
+				app:layout_constraintLeft_toLeftOf="@id/linearlayout_login_layout"
+				app:layout_constraintRight_toRightOf="@id/linearlayout_login_layout"/>
+
+		<LinearLayout
+				android:id="@+id/linearlayout_login_layout"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintLeft_toRightOf="@id/imageview_login_logo"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintHorizontal_weight="6"
+				android:orientation="vertical"
+				android:layout_marginEnd="16dp"
+				android:layout_marginStart="0dp">
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/textinputlayout_login_email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="@string/login_email"
+					style="@style/Widget.Applover.TextInputLayout">
+
+				<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/edittext_login_email"
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/TextInputEditTextHeight"
+						android:text="@={viewmodel.email}"
+						android:inputType="textEmailAddress"
+						style="@style/Theme.Applover.TextInputEditText"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/textinputlayout_login_password"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="16dp"
+					android:hint="@string/login_password"
+					style="@style/Widget.Applover.TextInputLayout"
+					app:passwordToggleDrawable="@drawable/login_selector_preview"
+					app:passwordToggleEnabled="true"
+					app:passwordToggleTint="@color/colorSecondary">
+
+				<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/edittext_login_password"
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/TextInputEditTextHeight"
+						android:text="@={viewmodel.password}"
+						android:inputType="textPassword"
+						style="@style/Theme.Applover.TextInputEditText"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+
+			<com.google.android.material.button.MaterialButton
+					android:id="@+id/button_login_login"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/ButtonHeight"
+					android:text="@string/login_login"
+					android:layout_marginTop="16dp"
+					style="@style/Theme.Applover.Button"/>
+		</LinearLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

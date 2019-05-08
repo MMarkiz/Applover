@@ -2,6 +2,16 @@
 	<string name="app_name">Applover</string>
 
 	<string name="login_email">Email address</string>
+	<string name="login_error_network_connection">No internet connection!</string>
+	<string name="login_error_server">Internal server error!</string>
+	<string name="login_error_unauthorized">Unauthorized!</string>
+	<string name="login_error_unknown">Unknown error!</string>
+	<string name="login_exit_click_info">Click back again to exit</string>
 	<string name="login_login">Login</string>
 	<string name="login_password">Password</string>
+	<string name="login_validation_not_empty">This field cannot be empty!</string>
+	<string name="login_validation_incorrect_email">Incorrect email!</string>
+	<string name="login_validation_short_password">Too short password!</string>
+
+	<string name="success_success_info">Success!</string>
 </resources>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<data>
+		<variable name="viewmodel"
+		          type="com.applover.markiz.ui.login.LoginViewModel"/>
+	</data>
+
 <androidx.constraintlayout.widget.ConstraintLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +13,6 @@
 		android:layout_height="match_parent"
 		android:background="@color/colorBackground"
 		tools:context=".ui.login.LoginActivity">
-
 
 	<ImageView
 			android:id="@+id/imageview_login_logo"
@@ -47,16 +52,17 @@
 			android:orientation="vertical">
 
 		<com.google.android.material.textfield.TextInputLayout
-				android:id="@+id/textinputlayout_login_login"
+				android:id="@+id/textinputlayout_login_email"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:hint="@string/login_email"
 				style="@style/Widget.Applover.TextInputLayout">
 
 			<com.google.android.material.textfield.TextInputEditText
-					android:id="@+id/edittext_login_login"
+					android:id="@+id/edittext_login_email"
 					android:layout_width="match_parent"
 					android:layout_height="@dimen/TextInputEditTextHeight"
+					android:text="@={viewmodel.email}"
 					android:inputType="textEmailAddress"
 					style="@style/Theme.Applover.TextInputEditText"/>
 		</com.google.android.material.textfield.TextInputLayout>
@@ -76,6 +82,7 @@
 					android:id="@+id/edittext_login_password"
 					android:layout_width="match_parent"
 					android:layout_height="@dimen/TextInputEditTextHeight"
+					android:text="@={viewmodel.password}"
 					android:inputType="textPassword"
 					style="@style/Theme.Applover.TextInputEditText"/>
 		</com.google.android.material.textfield.TextInputLayout>
@@ -90,3 +97,4 @@
 				style="@style/Theme.Applover.Button"/>
 	</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

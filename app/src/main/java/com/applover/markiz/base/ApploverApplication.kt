@@ -2,13 +2,13 @@ package com.applover.markiz.base
 
 import android.app.Application
 import com.applover.markiz.data.network.*
-import com.applover.markiz.data.repository.ApploverRepository
-import com.applover.markiz.data.repository.ApploverRepositoryImpl
+import com.applover.markiz.ui.login.LoginViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
+import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
 /**
@@ -20,8 +20,7 @@ class ApploverApplication : Application(), KodeinAware {
 
 		bind<ConnectivityInterceptor>() with singleton { ConnectivityInterceptorImpl(instance()) }
 		bind() from singleton { ApploverApiService(instance()) }
-		bind<ApploverNetworkDataSource>() with singleton { ApploverNetworkDataSourceImpl(instance()) }
-		bind<ApploverRepository>() with singleton { ApploverRepositoryImpl(instance()) }
+		bind() from provider { LoginViewModelFactory(instance()) }
 	}
 
 }
